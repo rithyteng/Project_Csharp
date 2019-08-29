@@ -24,13 +24,16 @@ namespace game.Migrations
                     b.Property<bool>("Archer");
 
                     b.Property<string>("Email")
-                        .IsRequired();
-
-                    b.Property<string>("Name")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasColumnName("email");
 
                     b.Property<string>("Password")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasColumnName("pw");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnName("user_name");
 
                     b.Property<bool>("Samurai");
 

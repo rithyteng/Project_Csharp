@@ -11,14 +11,17 @@ namespace game.Models{
         public int UserId {get;set;}
 
         [Required(ErrorMessage="Please Input Your Name")]
-        public string Name {get;set;}
+        [Column("user_name")]
+        public string UserName {get;set;}
 
         [Required(ErrorMessage="Please Input Your Email")]
         [EmailAddress]
+        [Column("email")]
         public string Email{get;set;}
 
         [Required(ErrorMessage="Please Input Your Password")]
         [DataType(DataType.Password)]
+        [Column("pw")]
         [MinLength(8,ErrorMessage="Password must be at least 8 characters ")]
         [RegularExpression("^(?=.{8,})(?=.*[a-z])(?=.*[0-9])(?=.*[@#$%^&+=!]).*$",ErrorMessage="Password Must Have At Least one number and One Special")]
         public string Password{get;set;}

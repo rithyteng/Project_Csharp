@@ -94,7 +94,7 @@ namespace game.Controllers
                 return View("Index");
             }
             User myuser = dbContext.Users.FirstOrDefault( u => u.UserId == myid);
-            ViewBag.Name = myuser.Name;
+            ViewBag.Name = myuser.UserName;
             if(myuser.Wizard ==true){
                 ViewBag.Wizard = true;
             }
@@ -109,6 +109,7 @@ namespace game.Controllers
             
             return View("Dashboard");
         }
+
         [HttpGet("addcharacter/{id}")]
         public IActionResult addcharacter(int id){
             return View("ChoseCharacter");
@@ -151,6 +152,7 @@ namespace game.Controllers
             dbContext.SaveChanges();
             return RedirectToAction("Dashboard",new{id = myid});
         }
+
 
         [HttpGet("logout")]
         public IActionResult LogOut(){
