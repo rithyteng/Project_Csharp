@@ -1,5 +1,5 @@
 {
-  "FilePath": "/Users/rithyteng/Documents/game/game/game.csproj",
+  "FilePath": "c:\\Users\\tjade\\OneDrive\\Desktop\\coding_dojo\\CSharp\\project\\Project_Csharp\\game.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-2.1",
     "LanguageVersion": "2.1",
@@ -2961,73 +2961,73 @@
   "RootNamespace": "game",
   "Documents": [
     {
-      "FilePath": "Views/Home/Dashboard.cshtml",
-      "TargetPath": "Views/Home/Dashboard.cshtml",
+      "FilePath": "Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views/Home/Wizard.cshtml",
-      "TargetPath": "Views/Home/Wizard.cshtml",
+      "FilePath": "Views\\Home\\Wizard.cshtml",
+      "TargetPath": "Views\\Home\\Wizard.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views/Home/Samurai.cshtml",
-      "TargetPath": "Views/Home/Samurai.cshtml",
+      "FilePath": "Views\\Home\\Samurai.cshtml",
+      "TargetPath": "Views\\Home\\Samurai.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views/Home/Privacy.cshtml",
-      "TargetPath": "Views/Home/Privacy.cshtml",
+      "FilePath": "Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views/Home/Archer.cshtml",
-      "TargetPath": "Views/Home/Archer.cshtml",
+      "FilePath": "Views\\Home\\Privacy.cshtml",
+      "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views/Home/login.cshtml",
-      "TargetPath": "Views/Home/login.cshtml",
+      "FilePath": "Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views/Home/ChoseCharacter.cshtml",
-      "TargetPath": "Views/Home/ChoseCharacter.cshtml",
+      "FilePath": "Views\\Home\\ChoseCharacter.cshtml",
+      "TargetPath": "Views\\Home\\ChoseCharacter.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views/Shared/_CookieConsentPartial.cshtml",
-      "TargetPath": "Views/Shared/_CookieConsentPartial.cshtml",
+      "FilePath": "Views\\Shared\\_CookieConsentPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_CookieConsentPartial.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views/Home/Index.cshtml",
-      "TargetPath": "Views/Home/Index.cshtml",
+      "FilePath": "Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views/Shared/_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views/Shared/_ValidationScriptsPartial.cshtml",
+      "FilePath": "Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views/Shared/Error.cshtml",
-      "TargetPath": "Views/Shared/Error.cshtml",
+      "FilePath": "Views\\Home\\login.cshtml",
+      "TargetPath": "Views\\Home\\login.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views/_ViewImports.cshtml",
-      "TargetPath": "Views/_ViewImports.cshtml",
+      "FilePath": "Views\\Home\\Dashboard.cshtml",
+      "TargetPath": "Views\\Home\\Dashboard.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views/_ViewStart.cshtml",
-      "TargetPath": "Views/_ViewStart.cshtml",
+      "FilePath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views/Shared/_Layout.cshtml",
-      "TargetPath": "Views/Shared/_Layout.cshtml",
+      "FilePath": "Views\\Home\\Archer.cshtml",
+      "TargetPath": "Views\\Home\\Archer.cshtml",
       "FileKind": "mvc"
     }
   ],
