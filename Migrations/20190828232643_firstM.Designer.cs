@@ -8,8 +8,8 @@ using game.Models;
 namespace game.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20190828222601_FirstMigrations")]
-    partial class FirstMigrations
+    [Migration("20190828232643_firstM")]
+    partial class firstM
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,13 +24,16 @@ namespace game.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Email")
-                        .IsRequired();
-
-                    b.Property<string>("Name")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasColumnName("email");
 
                     b.Property<string>("Password")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasColumnName("pw");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnName("user_name");
 
                     b.HasKey("UserId");
 

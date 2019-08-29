@@ -94,6 +94,12 @@ namespace game.Controllers
             
             return View("Dashboard");
         }
+
+        // [HttpGet("wizard")]
+        // public IActionResult Wizard()
+        // {
+
+        // }
         [HttpGet("logout")]
         public IActionResult LogOut(){
 
