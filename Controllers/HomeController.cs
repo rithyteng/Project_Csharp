@@ -96,18 +96,32 @@ namespace game.Controllers
             User myuser = dbContext.Users.FirstOrDefault( u => u.UserId == myid);
             ViewBag.Name = myuser.UserName;
             if(myuser.Wizard ==true){
+
                 ViewBag.Wizard = true;
             }
             if(myuser.Samurai ==true){
                 ViewBag.Samurai = true;
             }
             if(myuser.Archer ==true){
+                Archer myarcher = new Archer("Legolas");
+                ViewBag.Str = myarcher.Strength;
+                ViewBag.Lv = myarcher.Level;
+                ViewBag.Exp = myarcher.Exp;
+                ViewBag.Int = myarcher.Intelligence;
+                ViewBag.Dex = myarcher.Dexterity;
+                ViewBag.Hp = myarcher.Health;
                 ViewBag.Archer = true;
             }
-
+            
 
             
             return View("Dashboard");
+        }
+        [HttpGet("train/{id}")]
+        public IActionResult train(int id){
+            Archer myarcher = new Archer("Legolas");
+            myarcher.Level += 1;
+            return RedirectToAction("Dashboard",new{id = id});
         }
 
         [HttpGet("addcharacter/{id}")]

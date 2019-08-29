@@ -38,6 +38,15 @@ namespace game.Models{
         public bool Archer{get;set;}
 
     }
+
+    public class Characters{
+        [Key]
+        public int CharId{get;set;}
+
+        public User myuser{get;set;}
+        
+    }
+
     public class Login{
 
         [EmailAddress]

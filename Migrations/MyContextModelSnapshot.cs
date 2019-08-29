@@ -31,11 +31,11 @@ namespace game.Migrations
                         .IsRequired()
                         .HasColumnName("pw");
 
+                    b.Property<bool>("Samurai");
+
                     b.Property<string>("UserName")
                         .IsRequired()
                         .HasColumnName("user_name");
-
-                    b.Property<bool>("Samurai");
 
                     b.Property<bool>("Wizard");
 

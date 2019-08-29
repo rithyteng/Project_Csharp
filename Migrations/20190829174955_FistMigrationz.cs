@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace game.Migrations
 {
-    public partial class firstM : Migration
+    public partial class FistMigrationz : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,7 +15,10 @@ namespace game.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     user_name = table.Column<string>(nullable: false),
                     email = table.Column<string>(nullable: false),
-                    pw = table.Column<string>(nullable: false)
+                    pw = table.Column<string>(nullable: false),
+                    Wizard = table.Column<bool>(nullable: false),
+                    Samurai = table.Column<bool>(nullable: false),
+                    Archer = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {

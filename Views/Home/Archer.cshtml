@@ -8,9 +8,19 @@
 </head>
 <body>
     <h2>Welcome Archer @ViewBag.Name</h2>
-    <form>
-        
-    </form>
+    <div class="box1">
+        @{
+            <h3> Level: @ViewBag.Lv</h3>
+            <h3> Experience @ViewBag.Exp</h3>
+            <h3> Strength: @ViewBag.Str</h3>
+            <h3> Intelligence: @ViewBag.Int</h3>
+            <h3> Dexterity: @ViewBag.Dex</h3>
+            <h3> Health Point: @ViewBag.Hp</h3>
+            
+        }
+    </div>
+    <hr>
+    <button>  <a href="/train/@ViewBag.Id">Train</a>  </button>
 
 </body>
 </html>
