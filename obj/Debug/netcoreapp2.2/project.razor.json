@@ -2966,13 +2966,33 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views/Home/Wizard.cshtml",
+      "TargetPath": "Views/Home/Wizard.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views/Home/Samurai.cshtml",
+      "TargetPath": "Views/Home/Samurai.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views/Home/Privacy.cshtml",
       "TargetPath": "Views/Home/Privacy.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views/Home/Archer.cshtml",
+      "TargetPath": "Views/Home/Archer.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views/Home/login.cshtml",
       "TargetPath": "Views/Home/login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views/Home/ChoseCharacter.cshtml",
+      "TargetPath": "Views/Home/ChoseCharacter.cshtml",
       "FileKind": "mvc"
     },
     {

@@ -30,3 +30,7 @@
 /Users/rithyteng/Documents/game/game/obj/Debug/netcoreapp2.2/game.csproj.CopyComplete
 /Users/rithyteng/Documents/game/game/obj/Debug/netcoreapp2.2/Razor/Views/Home/login.g.cshtml.cs
 /Users/rithyteng/Documents/game/game/obj/Debug/netcoreapp2.2/Razor/Views/Home/Dashboard.g.cshtml.cs
+/Users/rithyteng/Documents/game/game/obj/Debug/netcoreapp2.2/Razor/Views/Home/ChoseCharacter.g.cshtml.cs
+/Users/rithyteng/Documents/game/game/obj/Debug/netcoreapp2.2/Razor/Views/Home/Wizard.g.cshtml.cs
+/Users/rithyteng/Documents/game/game/obj/Debug/netcoreapp2.2/Razor/Views/Home/Archer.g.cshtml.cs
+/Users/rithyteng/Documents/game/game/obj/Debug/netcoreapp2.2/Razor/Views/Home/Samurai.g.cshtml.cs

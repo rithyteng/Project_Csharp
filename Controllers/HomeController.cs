@@ -87,13 +87,71 @@ namespace game.Controllers
         }
         [HttpGet("Dashboard/{id}")]
         public IActionResult Dashboard(int id){
+            
             int? myid = HttpContext.Session.GetInt32("ID");
+            ViewBag.Id = myid;
             if(myid !=id ){
                 return View("Index");
             }
+            User myuser = dbContext.Users.FirstOrDefault( u => u.UserId == myid);
+            ViewBag.Name = myuser.Name;
+            if(myuser.Wizard ==true){
+                ViewBag.Wizard = true;
+            }
+            if(myuser.Samurai ==true){
+                ViewBag.Samurai = true;
+            }
+            if(myuser.Archer ==true){
+                ViewBag.Archer = true;
+            }
+
+
             
             return View("Dashboard");
         }
+        [HttpGet("addcharacter/{id}")]
+        public IActionResult addcharacter(int id){
+            return View("ChoseCharacter");
+        }
+        [HttpGet("/wizard")]
+        public IActionResult Wizard(){
+            int? myid = HttpContext.Session.GetInt32("ID");
+
+            User myuser = dbContext.Users.FirstOrDefault( u => u.UserId == myid);
+            myuser.Wizard = true;
+            myuser.Samurai = false;
+            myuser.Archer = false;
+            dbContext.Update(myuser);
+            dbContext.SaveChanges();
+            return RedirectToAction("Dashboard",new{id = myid});
+        }
+
+        [HttpGet("/samurai")]
+        public IActionResult Samurai(){
+            int? myid = HttpContext.Session.GetInt32("ID");
+
+            User myuser = dbContext.Users.FirstOrDefault( u => u.UserId == myid);
+            myuser.Wizard = false;
+            myuser.Samurai = true;
+            myuser.Archer = false;
+            dbContext.Update(myuser);
+            dbContext.SaveChanges();
+            return RedirectToAction("Dashboard",new{id = myid});
+        }
+
+        [HttpGet("/archer")]
+        public IActionResult archer(){
+            int? myid = HttpContext.Session.GetInt32("ID");
+
+            User myuser = dbContext.Users.FirstOrDefault( u => u.UserId == myid);
+            myuser.Wizard = false;
+            myuser.Samurai = false;
+            myuser.Archer = true;
+            dbContext.Update(myuser);
+            dbContext.SaveChanges();
+            return RedirectToAction("Dashboard",new{id = myid});
+        }
+
         [HttpGet("logout")]
         public IActionResult LogOut(){
 

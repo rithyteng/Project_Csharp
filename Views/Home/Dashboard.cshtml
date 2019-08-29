@@ -7,7 +7,28 @@
     <title>Document</title>
 </head>
 <body>
+    @{
+
+    }
     <h3>Dashboard</h3>
     <button>   <a href="/logout">Log Out</a>  </button>
+
+    <hr>
+    @if(@ViewBag.Wizard ==true){
+    <partial name="Wizard.cshtml"/>
+    }
+
+    @if(@ViewBag.Samurai == true){
+    <partial name="Samurai.cshtml"/>    
+    }
+
+    @if(@ViewBag.Archer == true){
+    <partial name="Archer.cshtml"/>    
+    }
+
+    @if(@ViewBag.Wizard !=true && @ViewBag.Samurai !=true && @ViewBag.Archer !=true ){
+
+        <button> <a href="/addcharacter/@ViewBag.Id"> Add Your Character </a></button>
+    }
 </body>
 </html>

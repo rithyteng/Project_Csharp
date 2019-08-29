@@ -23,11 +23,17 @@ namespace game.Models{
         [RegularExpression("^(?=.{8,})(?=.*[a-z])(?=.*[0-9])(?=.*[@#$%^&+=!]).*$",ErrorMessage="Password Must Have At Least one number and One Special")]
         public string Password{get;set;}
 
+
         [NotMapped]
         [Required(ErrorMessage="Please Input Confirmation Password")]
         [Compare("Password",ErrorMessage="Passwords Must Be Matched")]
         [DataType(DataType.Password)]
         public string Confirm {get;set;}
+
+        public bool Wizard{get;set;}
+        public bool Samurai{get;set;}
+        public bool Archer{get;set;}
+
     }
     public class Login{
 
