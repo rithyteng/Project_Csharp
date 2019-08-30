@@ -20,6 +20,20 @@ namespace game.Controllers
             public int Intelligence;
             public string Class;
 
+            private int attribute_pts;
+            public int Attribute_pt
+            {
+                get{return attribute_pts;}
+                set{attribute_pts = value;}
+            }
+            private int energy;
+            public int Energy
+            {
+                get{return energy;}
+                set{energy = value;}
+            }
+            public int current_energy;
+
             private int health;
             public int Health
             {
@@ -56,6 +70,9 @@ namespace game.Controllers
                 health = 100;
                 level = 1;
                 exp = 0;
+                Energy = 100;
+                Attribute_pt = 0;
+                current_energy = Energy;
             }
 
             public int Attack(Human target)
@@ -66,6 +83,24 @@ namespace game.Controllers
                 System.Console.WriteLine($"{Name} attacked {target.Name} for {dmg} damage, {target.Name} has {target.Health} hp left");
                 return target.Health;
             }
+
+            public int Train(Human self)
+            {
+                if(self.current_energy < 20)
+                {
+                    System.Console.WriteLine($"Can't train, this requires 10 energy. You currently have {self.current_energy}");
+                }
+                if(self.exp >= 100)
+                {
+                    self.level = 2;
+                    self.exp -= 100;
+                }
+                self.exp += 10;
+                self.current_energy -= 20;
+                System.Console.WriteLine($"{self.Name} trained and gained 10 exp. Your total experience is now {self.exp}. You have {self.current_energy} left");
+                return self.exp;
+            }
+
             public virtual void ShowInfo()
             {
                 System.Console.WriteLine($"{Name} has {Strength} str, {Intelligence} intelligence, {Dexterity} dex, {Current_hp} current hp, {exp} exp, {health} total hp, class is {Class}");
