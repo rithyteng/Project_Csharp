@@ -150,6 +150,7 @@ namespace game.Controllers
             myuser.Archer = true;
             dbContext.Update(myuser);
             dbContext.SaveChanges();
+
             return RedirectToAction("Dashboard",new{id = myid});
         }
 
