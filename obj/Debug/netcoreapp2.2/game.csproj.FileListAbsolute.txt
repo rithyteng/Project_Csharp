@@ -36,6 +36,7 @@
 /Users/rithyteng/Documents/game/game/obj/Debug/netcoreapp2.2/Razor/Views/Home/Archer.g.cshtml.cs
 /Users/rithyteng/Documents/game/game/obj/Debug/netcoreapp2.2/Razor/Views/Home/Samurai.g.cshtml.cs
 =======
+>>>>>>> 6538bfab34d8a3afe8657bce6c3d1d30d846bf6d
 C:/Users/tjade/OneDrive/Desktop/coding_dojo/CSharp/project/Project_Csharp/bin/Debug/netcoreapp2.2/game.deps.json
 C:/Users/tjade/OneDrive/Desktop/coding_dojo/CSharp/project/Project_Csharp/bin/Debug/netcoreapp2.2/game.runtimeconfig.json
 C:/Users/tjade/OneDrive/Desktop/coding_dojo/CSharp/project/Project_Csharp/bin/Debug/netcoreapp2.2/game.runtimeconfig.dev.json
@@ -52,10 +53,14 @@ C:/Users/tjade/OneDrive/Desktop/coding_dojo/CSharp/project/Project_Csharp/obj/De
 C:/Users/tjade/OneDrive/Desktop/coding_dojo/CSharp/project/Project_Csharp/obj/Debug/netcoreapp2.2/game.TagHelpers.input.cache
 C:/Users/tjade/OneDrive/Desktop/coding_dojo/CSharp/project/Project_Csharp/obj/Debug/netcoreapp2.2/game.TagHelpers.output.cache
 C:/Users/tjade/OneDrive/Desktop/coding_dojo/CSharp/project/Project_Csharp/obj/Debug/netcoreapp2.2/game.RazorCoreGenerate.cache
+C:/Users/tjade/OneDrive/Desktop/coding_dojo/CSharp/project/Project_Csharp/obj/Debug/netcoreapp2.2/Razor/Views/Home/Archer.g.cshtml.cs
+C:/Users/tjade/OneDrive/Desktop/coding_dojo/CSharp/project/Project_Csharp/obj/Debug/netcoreapp2.2/Razor/Views/Home/ChoseCharacter.g.cshtml.cs
 C:/Users/tjade/OneDrive/Desktop/coding_dojo/CSharp/project/Project_Csharp/obj/Debug/netcoreapp2.2/Razor/Views/Home/Dashboard.g.cshtml.cs
 C:/Users/tjade/OneDrive/Desktop/coding_dojo/CSharp/project/Project_Csharp/obj/Debug/netcoreapp2.2/Razor/Views/Home/Index.g.cshtml.cs
 C:/Users/tjade/OneDrive/Desktop/coding_dojo/CSharp/project/Project_Csharp/obj/Debug/netcoreapp2.2/Razor/Views/Home/login.g.cshtml.cs
 C:/Users/tjade/OneDrive/Desktop/coding_dojo/CSharp/project/Project_Csharp/obj/Debug/netcoreapp2.2/Razor/Views/Home/Privacy.g.cshtml.cs
+C:/Users/tjade/OneDrive/Desktop/coding_dojo/CSharp/project/Project_Csharp/obj/Debug/netcoreapp2.2/Razor/Views/Home/Samurai.g.cshtml.cs
+C:/Users/tjade/OneDrive/Desktop/coding_dojo/CSharp/project/Project_Csharp/obj/Debug/netcoreapp2.2/Razor/Views/Home/Wizard.g.cshtml.cs
 C:/Users/tjade/OneDrive/Desktop/coding_dojo/CSharp/project/Project_Csharp/obj/Debug/netcoreapp2.2/Razor/Views/Shared/Error.g.cshtml.cs
 C:/Users/tjade/OneDrive/Desktop/coding_dojo/CSharp/project/Project_Csharp/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_CookieConsentPartial.g.cshtml.cs
 C:/Users/tjade/OneDrive/Desktop/coding_dojo/CSharp/project/Project_Csharp/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_Layout.g.cshtml.cs
@@ -68,4 +73,3 @@ C:/Users/tjade/OneDrive/Desktop/coding_dojo/CSharp/project/Project_Csharp/obj/De
 C:/Users/tjade/OneDrive/Desktop/coding_dojo/CSharp/project/Project_Csharp/obj/Debug/netcoreapp2.2/game.dll
 C:/Users/tjade/OneDrive/Desktop/coding_dojo/CSharp/project/Project_Csharp/obj/Debug/netcoreapp2.2/game.pdb
 C:/Users/tjade/OneDrive/Desktop/coding_dojo/CSharp/project/Project_Csharp/obj/Debug/netcoreapp2.2/game.csproj.CopyComplete
->>>>>>> 6538bfab34d8a3afe8657bce6c3d1d30d846bf6d

@@ -43,8 +43,17 @@ namespace game.Models{
         [Key]
         public int CharId{get;set;}
 
+        public int Strength{get;set;} 
+
+        public int Dexterity {get;set;}
+
+        public int Health {get;set;}
+        public int Level {get;set;}
+        public int Exp{get;set;}
+        public int Energy{get;set;}
+        public int Points{get;set;}
         public User myuser{get;set;}
-        
+        public int UserId{get;set;}
     }
 
     public class Login{

@@ -16,11 +16,26 @@
             <h3> Intelligence: @ViewBag.Int</h3>
             <h3> Dexterity: @ViewBag.Dex</h3>
             <h3> Health Point: @ViewBag.Hp</h3>
+            <h3> Points = @ViewBag.Points</h3>
+            <h3> Energy = @ViewBag.Energy</h3>
             
+        }
+        @if(@ViewBag.Points>0){
+            <button>  <a href="/addstrength/@ViewBag.Id">Add Strength</a>  </button>
+        }
+        @if(@ViewBag.Lv >1){
+            <img src="http://clash-wiki.com/images/army/archer/archer_level1.jpg" alt="Archer Lv 1" width="200" height="200">
+        }
+        else if(@ViewBag.Lv>5){
+            <img src="https://www.wallpaperup.com/uploads/wallpapers/2013/08/20/136338/71695cc2cb6928782638a55071b04ab3-700.jpg" alt ="Archer Level 6" width="200" height="200" > 
+        }
+        else{
+            <img src="https://thewallpaper.co//wp-content/uploads/2017/08/artwork-fantasy-free-stock-photos-art-archer-mobile-wallpaper-warrior-free-wallpaper-laptop-weapon-technology-wallpapers.jpg" width="200" height="200">
         }
     </div>
     <hr>
     <button>  <a href="/train/@ViewBag.Id">Train</a>  </button>
+    <button>   <a href="/meditate/@ViewBag.Id">Meditate</a>  </button>
 
 </body>
 </html>

@@ -8,8 +8,8 @@ using game.Models;
 namespace game.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20190829174955_FistMigrationz")]
-    partial class FistMigrationz
+    [Migration("20190830001047_FirstMigrations")]
+    partial class FirstMigrations
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -17,6 +17,34 @@ namespace game.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "2.2.4-servicing-10062")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
+
+            modelBuilder.Entity("game.Models.Characters", b =>
+                {
+                    b.Property<int>("CharId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("Dexterity");
+
+                    b.Property<int>("Energy");
+
+                    b.Property<int>("Exp");
+
+                    b.Property<int>("Health");
+
+                    b.Property<int>("Level");
+
+                    b.Property<int>("Points");
+
+                    b.Property<int>("Strength");
+
+                    b.Property<int>("UserId");
+
+                    b.HasKey("CharId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Characters");
+                });
 
             modelBuilder.Entity("game.Models.User", b =>
                 {
@@ -44,6 +72,14 @@ namespace game.Migrations
                     b.HasKey("UserId");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("game.Models.Characters", b =>
+                {
+                    b.HasOne("game.Models.User", "myuser")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

@@ -18,7 +18,8 @@ namespace game.Controllers
             public int Strength;
             public int Dexterity;
             public int Intelligence;
-            
+            public string Class;
+
             private int health;
             public int Health
             {
@@ -39,6 +40,13 @@ namespace game.Controllers
                 get{return exp;}
                 set{exp = value;}
             }
+
+            private int current_hp;
+            public int Current_hp 
+            {
+                get{return current_hp;}
+                set{current_hp = value;}
+            }
             public Human(string name)
             {
                 Name = name;
@@ -54,12 +62,13 @@ namespace game.Controllers
             {
                 int dmg = Strength * 3;
                 target.Health -= dmg;
-                System.Console.WriteLine($"{Name} attacked {target.Name} for {dmg} damage, {target.Name} has {target.Health} left");
+                target.Current_hp = target.Health;
+                System.Console.WriteLine($"{Name} attacked {target.Name} for {dmg} damage, {target.Name} has {target.Health} hp left");
                 return target.Health;
             }
             public virtual void ShowInfo()
             {
-                System.Console.WriteLine($"{Name} has {Strength} str, {Intelligence} intel, {Dexterity} dex, {health} hp");
+                System.Console.WriteLine($"{Name} has {Strength} str, {Intelligence} intelligence, {Dexterity} dex, {Current_hp} current hp, {exp} exp, {health} total hp, class is {Class}");
             }
         }
 
@@ -70,13 +79,28 @@ namespace game.Controllers
                 Name = name;
                 Health = 50;
                 Intelligence = 5;
+                Class = "Wizard";
+                Current_hp = Health;
             }
 
             public int FireBall(Human target)
             {
+                if(target.Class == "Archer")
+                {
+                    int ex_dmg = Intelligence * 4;
+                    // int s_temp = target.Health;
+                    target.Current_hp -= ex_dmg;
+                    // target.Health = s_temp;
+                    System.Console.WriteLine($"{Name} used fireball on {target.Name} and and it was extra effective on Archer type causing {ex_dmg} damage, {target.Name} has {target.Current_hp} hp left");
+                    return target.Health;
+                }
                 int dmg = Intelligence * 3;
                 target.Health -= dmg;
-                System.Console.WriteLine($"{Name} used fireball on {target.Name} and inflicted {dmg} damage, {target.Name} has {target.Health} left");
+                int temp = target.Health;
+                target.Current_hp -= dmg;
+                target.Health = temp;
+                target.Current_hp = target.Health;
+                System.Console.WriteLine($"{Name} used fireball on {target.Name} and inflicted {dmg} damage, {target.Name} has {target.Current_hp} left");
                 return target.Health;
             }
         }
@@ -87,13 +111,23 @@ namespace game.Controllers
                 Name = name;
                 Health = 70;
                 Dexterity = 5;
+                Class = "Archer";
+                Current_hp = Health;
             }
 
             public int SingleShot(Human target)
             {
+                if(target.Class == "Samurai")
+                {
+                    int ex_dmg = Dexterity * 4;
+                    // int temp = target.Health;
+                    target.Current_hp -= ex_dmg;
+                    System.Console.WriteLine($"{Name} used singleshot on {target.Name} and and it was extra effective on Samurai type causing {ex_dmg} damage, {target.Name} has {target.Current_hp} hp left");
+                }
                 int dmg = Dexterity * 3;
                 target.Health -= dmg;
-                System.Console.WriteLine($"{Name} used SingleShot on {target.Name} and inflicted {dmg} damage, {target.Name} has {target.Health} left");
+                target.Current_hp = target.Health;
+                System.Console.WriteLine($"{Name} used SingleShot on {target.Name} and inflicted {dmg} damage, {target.Name} has {target.Current_hp} left");
                 return target.Health;
             }
         }
@@ -105,13 +139,22 @@ namespace game.Controllers
                 Name = name;
                 Health = 100;
                 Strength = 5;
+                Class = "Samurai";
+                Current_hp = Health;
             }
 
             public int Slash(Human target)
             {
+                if(target.Class == "Wizard")
+                {
+                    int ex_dmg = Strength * 4;
+                    target.Current_hp -= ex_dmg;
+                    System.Console.WriteLine($"{Name} used Slash on {target.Name} and and it was extra effective on Wizard type causing {ex_dmg} damage, {target.Name} has {target.Current_hp} hp left");
+                }
                 int dmg = Strength * 3;
                 target.Health -= dmg;
-                System.Console.WriteLine($"{Name} used slash on {target.Name} for {dmg} damage, {target.Name} has {target.Health} left");
+                target.Current_hp = target.Health;
+                System.Console.WriteLine($"{Name} used slash on {target.Name} for {dmg} damage, {target.Name} has {target.Current_hp} left");
                 return target.Health;
             }
         }

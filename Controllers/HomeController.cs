@@ -103,24 +103,69 @@ namespace game.Controllers
                 ViewBag.Samurai = true;
             }
             if(myuser.Archer ==true){
-                Archer myarcher = new Archer("Legolas");
+                Characters myarcher = dbContext.Characters.FirstOrDefault(u => u.UserId == myid);
+                
                 ViewBag.Str = myarcher.Strength;
                 ViewBag.Lv = myarcher.Level;
                 ViewBag.Exp = myarcher.Exp;
-                ViewBag.Int = myarcher.Intelligence;
+                // ViewBag.Int = myarcher.Intelligence;
                 ViewBag.Dex = myarcher.Dexterity;
                 ViewBag.Hp = myarcher.Health;
+                ViewBag.Points = myarcher.Points;
+                ViewBag.Energy = myarcher.Energy;
                 ViewBag.Archer = true;
+
+
+            
             }
             
 
             
             return View("Dashboard");
         }
+        [HttpGet("/meditate/{id}")]
+        public IActionResult Meditate(int id){
+
+                Stopwatch EnergyRecover = new Stopwatch();
+                EnergyRecover.Start();
+                System.Threading.Thread.Sleep(1000);
+                EnergyRecover.Stop();
+                
+                Characters thisarcher = dbContext.Characters.FirstOrDefault(u => u.UserId ==id);
+                thisarcher.Energy +=5;
+                dbContext.Update(thisarcher);
+                dbContext.SaveChanges();
+
+                return RedirectToAction("Dashboard",new{id = id});
+
+        }
+        
+        [HttpGet("addstrength/{id}")]
+        public IActionResult AddStrength(int id){
+            Characters mychar = dbContext.Characters.FirstOrDefault( u => u.UserId ==id);
+            mychar.Strength+=1;
+            mychar.Points -=1;
+            dbContext.Update(mychar);
+            dbContext.SaveChanges();
+            return RedirectToAction("Dashboard",new{id = id});
+        }
         [HttpGet("train/{id}")]
         public IActionResult train(int id){
-            Archer myarcher = new Archer("Legolas");
-            myarcher.Level += 1;
+            
+            Characters mychar = dbContext.Characters.FirstOrDefault(u => u.UserId ==id);
+            if(mychar.Energy<10){
+                return RedirectToAction("Dashboard",new{id = id});
+            }
+            mychar.Exp += 50;
+            mychar.Energy -=10;
+            
+            if(mychar.Exp >=100){
+                mychar.Points +=10;
+                mychar.Level +=1;
+                mychar.Exp -=100;
+            }
+            dbContext.Update(mychar);
+            dbContext.SaveChanges();
             return RedirectToAction("Dashboard",new{id = id});
         }
 
@@ -157,6 +202,7 @@ namespace game.Controllers
         [HttpGet("/archer")]
         public IActionResult archer(){
             int? myid = HttpContext.Session.GetInt32("ID");
+            ViewBag.Id = myid;
 
             User myuser = dbContext.Users.FirstOrDefault( u => u.UserId == myid);
             myuser.Wizard = false;
@@ -164,6 +210,23 @@ namespace game.Controllers
             myuser.Archer = true;
             dbContext.Update(myuser);
             dbContext.SaveChanges();
+
+            // Archer mychar = new Archer("archer");
+            Characters mychar = new Characters()
+            {
+                    UserId = ViewBag.Id,
+                    Strength = 3,
+                    Dexterity = 5,
+                    Health = 70,
+                    Level =1 ,
+                    Exp = 0,
+                    Energy =100,
+                    Points =0
+            };
+            
+            dbContext.Characters.Add(mychar);
+            dbContext.SaveChanges();
+
             return RedirectToAction("Dashboard",new{id = myid});
         }
 
